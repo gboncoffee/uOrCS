@@ -22,9 +22,12 @@ SRC_CORE =  simulator.cpp orcs_engine.cpp\
 			$(SRC_PACKAGE) \
 			$(SRC_PROCESSOR)
 
+SRC_BTB = btb.cpp
+OBJS_BTB = ${SRC_BTB:.cpp=.o}
+
 ################################################################################
 OBJS_CORE = ${SRC_CORE:.cpp=.o}
-OBJS = $(OBJS_CORE)
+OBJS = $(OBJS_CORE) $(OBJS_BTB)
 ################################################################################
 # Implicit rules.
 %.o : %.cpp %.hpp
@@ -34,7 +37,7 @@ OBJS = $(OBJS_CORE)
 
 all: uorcs
 
-uorcs: $(OBJS_CORE)
+uorcs: $(OBJS)
 	$(LD) $(LDFLAGS) -o $(BIN_NAME) $(OBJS) $(LIBRARY)
 
 clean:

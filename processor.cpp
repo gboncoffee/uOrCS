@@ -5,6 +5,7 @@
 // ~ Gabriel
 #include <cstdio>
 
+#include "btb.hpp"
 #include "opcode_package.hpp"  // opcode_package_t
 #include "orcs_engine.hpp"     // orcs_engine_t
 #include "simulator.hpp"       // ORCS_PRINTF
@@ -14,7 +15,7 @@
 processor_t::processor_t(){};
 
 // =============================================================================
-void processor_t::allocate(){};
+void processor_t::allocate() { this->btb = new btb_t; };
 
 // =============================================================================
 void processor_t::clock() {
@@ -23,11 +24,16 @@ void processor_t::clock() {
     if (!orcs_engine.trace_reader->trace_fetch(&new_instruction)) {
         // If EOF.
         orcs_engine.simulator_alive = false;
+        return;
     }
+
+    orcs_engine.global_cycle += this->btb->check_instruction(
+        &new_instruction, orcs_engine.get_global_cycle());
 };
 
 // =============================================================================
 void processor_t::statistics() {
     ORCS_PRINTF("######################################################\n");
     ORCS_PRINTF("processor_t\n");
+    this->btb->statistics();
 };
