@@ -1,0 +1,110 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-O3",
+      "-ggdb",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++11",
+      "-o",
+      "simulator.o",
+      "simulator.cpp"
+    ],
+    "directory": "/home/gabriel/src/uOrCS",
+    "file": "/home/gabriel/src/uOrCS/simulator.cpp",
+    "output": "/home/gabriel/src/uOrCS/simulator.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-O3",
+      "-ggdb",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++11",
+      "-o",
+      "orcs_engine.o",
+      "orcs_engine.cpp"
+    ],
+    "directory": "/home/gabriel/src/uOrCS",
+    "file": "/home/gabriel/src/uOrCS/orcs_engine.cpp",
+    "output": "/home/gabriel/src/uOrCS/orcs_engine.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-O3",
+      "-ggdb",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++11",
+      "-o",
+      "trace_reader.o",
+      "trace_reader.cpp"
+    ],
+    "directory": "/home/gabriel/src/uOrCS",
+    "file": "/home/gabriel/src/uOrCS/trace_reader.cpp",
+    "output": "/home/gabriel/src/uOrCS/trace_reader.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-O3",
+      "-ggdb",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++11",
+      "-o",
+      "opcode_package.o",
+      "opcode_package.cpp"
+    ],
+    "directory": "/home/gabriel/src/uOrCS",
+    "file": "/home/gabriel/src/uOrCS/opcode_package.cpp",
+    "output": "/home/gabriel/src/uOrCS/opcode_package.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-O3",
+      "-ggdb",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++11",
+      "-o",
+      "processor.o",
+      "processor.cpp"
+    ],
+    "directory": "/home/gabriel/src/uOrCS",
+    "file": "/home/gabriel/src/uOrCS/processor.cpp",
+    "output": "/home/gabriel/src/uOrCS/processor.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-c",
+      "-O3",
+      "-ggdb",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++11",
+      "-o",
+      "btb.o",
+      "btb.cpp"
+    ],
+    "directory": "/home/gabriel/src/uOrCS",
+    "file": "/home/gabriel/src/uOrCS/btb.cpp",
+    "output": "/home/gabriel/src/uOrCS/btb.o"
+  }
+]
