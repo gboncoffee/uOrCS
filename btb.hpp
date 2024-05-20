@@ -65,7 +65,8 @@ class btb_t {
     // Returns the latency.
     int check_instruction(opcode_package_t *instruction, uint64_t cicle);
     inline uint64_t get_total_accesses() {
-        return this->n_calls + this->n_syscalls + this->n_uncond;
+        return this->n_calls + this->n_syscalls + this->n_uncond +
+               this->n_cond_taken + this->n_cond_not_taken;
     }
 };
 
