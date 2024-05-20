@@ -147,7 +147,7 @@ int btb_t::check_last(opcode_package_t *instruction) {
     int latency = 0;
     if (this->last_entry != nullptr) {
         bool is_taken =
-            instruction->opcode_address == this->last_address + this->last_size;
+            instruction->opcode_address != this->last_address + this->last_size;
 
         if (this->last_entry->valid && this->last_entry->is_conditional) {
             // Hit.
