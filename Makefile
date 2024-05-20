@@ -24,10 +24,12 @@ SRC_CORE =  simulator.cpp orcs_engine.cpp\
 
 SRC_BTB = btb.cpp
 OBJS_BTB = ${SRC_BTB:.cpp=.o}
+SRC_PREDICTOR = predictor.cpp
+OBJS_PREDICTOR = ${SRC_PREDICTOR:.cpp=.o}
 
 ################################################################################
 OBJS_CORE = ${SRC_CORE:.cpp=.o}
-OBJS = $(OBJS_CORE) $(OBJS_BTB)
+OBJS = $(OBJS_CORE) $(OBJS_BTB) $(OBJS_PREDICTOR)
 ################################################################################
 # Implicit rules.
 %.o : %.cpp %.hpp

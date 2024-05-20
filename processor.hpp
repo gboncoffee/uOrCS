@@ -2,10 +2,12 @@
 #define PROCESSOR_HPP
 
 #include "btb.hpp"
+#include "predictor.hpp"
 
 class processor_t {
    public:
     btb_t *btb;
+    predictor_t *predictor;
     // =========================================================================
     // Methods.
     // =========================================================================

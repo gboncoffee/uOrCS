@@ -1,0 +1,12 @@
+{
+	"makefile.launchConfigurations": [
+		{
+			"cwd": "/home/gabriel/src/uOrCS",
+			"binaryPath": "/home/gabriel/src/uOrCS/uorcs",
+			"binaryArgs": []
+		}
+	],
+	"[cpp]": {
+		"editor.tabSize": 4
+	}
+}

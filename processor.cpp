@@ -8,14 +8,18 @@
 #include "btb.hpp"
 #include "opcode_package.hpp"  // opcode_package_t
 #include "orcs_engine.hpp"     // orcs_engine_t
-#include "simulator.hpp"       // ORCS_PRINTF
+#include "predictor.hpp"
+#include "simulator.hpp"  // ORCS_PRINTF
 #include "trace_reader.hpp"
 
 // =============================================================================
 processor_t::processor_t(){};
 
 // =============================================================================
-void processor_t::allocate() { this->btb = new btb_t; };
+void processor_t::allocate() {
+    this->btb = new btb_t;
+    this->predictor = new predictor_t;
+};
 
 // =============================================================================
 void processor_t::clock() {
@@ -29,6 +33,8 @@ void processor_t::clock() {
 
     orcs_engine.global_cycle += this->btb->check_instruction(
         &new_instruction, orcs_engine.get_global_cycle());
+    orcs_engine.global_cycle +=
+        this->predictor->check_instruction(&new_instruction);
 };
 
 // =============================================================================
@@ -36,4 +42,5 @@ void processor_t::statistics() {
     ORCS_PRINTF("######################################################\n");
     ORCS_PRINTF("processor_t\n");
     this->btb->statistics();
+    this->predictor->statistics();
 };
