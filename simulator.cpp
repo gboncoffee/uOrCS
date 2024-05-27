@@ -78,6 +78,7 @@ int main(int argc, char **argv) {
     }
 
     ORCS_PRINTF("End of Simulation\n")
+    ORCS_PRINTF("Cicles: %lu\n", orcs_engine.global_cycle);
     orcs_engine.trace_reader->statistics();
     orcs_engine.processor->statistics();
 
