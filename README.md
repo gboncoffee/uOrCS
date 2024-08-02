@@ -11,6 +11,8 @@ There's some code and some declarations here that appear kinda weird. This is
 normal as they were removed from a much bigger codebase, where they made actual
 sense.
 
+The branch predictor and BTB were added as an exercise.
+
 Happy coding! ;)
 
 ## Notice
